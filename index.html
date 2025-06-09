@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Voice Call App</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    input, button { margin: 5px; padding: 8px; font-size: 16px; }
+  </style>
+</head>
+<body>
+  <h2>Simple Voice Call</h2>
+  <p>Your ID: <span id="my-id"></span></p>
+  <input id="peer-id" placeholder="Enter Peer ID to call">
+  <button onclick="callPeer()">Call</button>
+  <button onclick="toggleMute()">Mute</button>
+  <button onclick="endCall()">End Call</button>
+  <audio id="remoteAudio" autoplay></audio>
+  <audio id="ringtone" src="ringtone.mp3" preload="auto"></audio>
+  <script src="https://unpkg.com/peerjs@1.5.2/dist/peerjs.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
